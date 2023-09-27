@@ -61,12 +61,12 @@ namespace AvaloniaGuides.ViewModels
 {
     public class MainWindowViewModel 
     {
-        private void PerformAction(string msg)
+        public void PerformAction(string msg)
         {
             Debug.WriteLine($"The action was called. {msg}");
         }
 
-        private bool CanPerformAction(object msg)
+        public bool CanPerformAction(object msg)
         {
             if (msg!=null) return !string.IsNullOrWhiteSpace( msg.ToString() );
             return false;
